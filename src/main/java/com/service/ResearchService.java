@@ -3,7 +3,6 @@ package com.service;
 import com.entity.Course;
 import com.entity.CourseSession;
 import com.entity.Location;
-import com.repository.CourseDAO;
 import com.repository.CourseSessionDAO;
 
 import java.util.ArrayList;
@@ -12,53 +11,68 @@ import java.util.List;
 
 public final class ResearchService {
     private final CourseSessionDAO courseSessionDAO = new CourseSessionDAO();
-    private final CourseDAO courseDAO = new CourseDAO();
 
-    //TODO Test it
-    public List<Course> FindByKeyword (String keyword) {
-        List<Course> courses = courseDAO.getAll();
-        List<Course> toReturn = new ArrayList<>();
+    /**
+     * Return the session filtered by a keyword in the title of the course corresponding.
+     * @param keyword
+     * @return
+     */
+    public List<CourseSession> FindByKeyword (String keyword) {
+        List<CourseSession> courseSessions = courseSessionDAO.getAll();
+        List<CourseSession> toReturn = new ArrayList<>();
 
-        for (Course course : courses) {
-            if (course.getTitle().contains(keyword)
-                && !toReturn.contains(course)) {
-                toReturn.add(course);
+        for (CourseSession session : courseSessions) {
+            if (session.getCourse().getTitle().contains(keyword)
+                && !toReturn.contains(session)) {
+                toReturn.add(session);
             }
         }
 
         return toReturn;
     }
 
-    //TODO Test it
-    public List<Course> FindByDate (Date date){
+    /**
+     * Return the list of the course session which contains {@param date}.
+     * @param date
+     * @return
+     */
+    public List<CourseSession> FindByDate (Date date){
         List<CourseSession> sessions = courseSessionDAO.getAll();
-        List<Course> toReturn = new ArrayList<>();
+        List<CourseSession> toReturn = new ArrayList<>();
         for(CourseSession session : sessions) {
             /*Check if the date is during the session and if the list does not
               already contain the course */
             if (date.after(session.getStartDate())
                 && date.before(session.getEndDate())
-                && !toReturn.contains(session.getCourse()))
-                toReturn.add(session.getCourse());
+                && !toReturn.contains(session))
+                toReturn.add(session);
         }
 
         return toReturn;
     }
 
-    //TODO Test it
-    public List<Course> FindByLocation (Location loc){
+    /**
+     * Return the list of the session which is located at {@param loc}
+     * @param loc
+     * @return
+     */
+    public List<CourseSession> FindByLocation (Location loc){
         List<CourseSession> sessions = courseSessionDAO.getAll();
-        List<Course> toReturn = new ArrayList<>();
+        List<CourseSession> toReturn = new ArrayList<>();
         for(CourseSession session : sessions) {
             if (session.getLocation().equals(loc)
-                && !toReturn.contains(session.getCourse()))
-                toReturn.add(session.getCourse());
+                && !toReturn.contains(session))
+                toReturn.add(session);
         }
 
         return toReturn;
     }
 
-    //TODO Test it
+    /**
+     * Return the list of session filtered by {@param course}
+     * @param course
+     * @return
+     */
     public List<CourseSession> FindByCourse (Course course){
         List<CourseSession> sessions = courseSessionDAO.getAll();
         List<CourseSession> toReturn = new ArrayList<>();
