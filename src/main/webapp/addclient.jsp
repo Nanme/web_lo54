@@ -25,28 +25,28 @@
 
 
     <div class="form-group">
-        <label for="exampleInputEmail1">Last Name</label>
-        <input type="text" class="form-control" id="exampleInputEmail" placeholder="Nombre" name="lastname" />
+        <label for="surname">Last Name</label>
+        <input type="text" class="form-control" id="surname" placeholder="Nombre" name="lastname" />
     </div>
 
     <div class="form-group">
-        <label for="exampleInputEmail1">Fist Name</label>
-        <input type="text" class="form-control" id="exampleInputEmail1" placeholder="E-Mail" name="fisrtname" />
+        <label for="name">Fist Name</label>
+        <input type="text" class="form-control" id="name" placeholder="E-Mail" name="fisrtname" />
     </div>
 
     <div class="form-group">
-        <label for="exampleInputEmail1">Address</label>
-        <input type="text" class="form-control" id="exampleInputEmail" placeholder="Nombre" name="address" />
+        <label for="address">Address</label>
+        <input type="text" class="form-control" id="address" placeholder="Nombre" name="address" />
     </div>
 
     <div class="form-group">
-        <label for="exampleInputEmail1">Phone</label>
-        <input type="text" class="form-control" id="exampleInputEmail1" placeholder="E-Mail" name="phone" />
+        <label for="phone">Phone</label>
+        <input type="text" class="form-control" id="phone" placeholder="E-Mail" name="phone" />
     </div>
 
     <div class="form-group">
-        <label for="exampleInputEmail1">E-Mail</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="E-Mail" name="correo" />
+        <label for="correo">E-Mail</label>
+        <input type="email" class="form-control" id="correo" placeholder="E-Mail" name="correo" />
     </div>
 
 

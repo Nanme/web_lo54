@@ -65,6 +65,8 @@ public class AddClient extends HttpServlet {
             nuevomail.sendingSubscriptionMail(cliente1);
 
 
+
+
             session.save(nuevomail);
 
             session.getTransaction().commit();
