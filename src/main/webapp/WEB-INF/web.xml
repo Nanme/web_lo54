@@ -14,4 +14,13 @@
         <servlet-name>TestServlet</servlet-name>
         <url-pattern>/test</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>AddClient</servlet-name>
+        <servlet-class>com.servlet.AddClient</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>AddClient</servlet-name>
+        <url-pattern>/addclient</url-pattern>
+    </servlet-mapping>
 </web-app>

@@ -4,6 +4,8 @@ import com.entity.Client;
 import com.entity.CourseSession;
 import com.repository.ClientDAO;
 
+import javax.jms.Session;
+
 public final class SubscribeService {
     private final ClientDAO clientDAO = new ClientDAO();
 

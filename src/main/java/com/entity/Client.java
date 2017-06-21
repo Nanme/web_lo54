@@ -1,6 +1,7 @@
 package com.entity;
 
 
+import javax.jms.Session;
 import javax.persistence.*;
 import java.io.Serializable;
 
@@ -14,7 +15,7 @@ public final class Client implements Serializable {
     private String phone;
     private CourseSession courseSession;
 
-    public Client() {
+    public Client(Integer id, String lastName, String firstName, String address, String email, String phone, String session) {
     }
 
     public Client(Integer id, String lastName, String firstName, String address, String email, String phone,

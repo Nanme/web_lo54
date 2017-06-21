@@ -10,7 +10,7 @@
             jdbc:mysql://localhost:3306/mydb
         </property>
         <property name="connection.username">root</property>
-        <!--<property name="connection.password">admin</property>-->
+        <property name="connection.password">34403853</property>
         <property name="connection.pool_size">1</property>
 
         <property name="dialect">
